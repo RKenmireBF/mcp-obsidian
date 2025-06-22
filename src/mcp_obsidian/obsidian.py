@@ -8,7 +8,7 @@ class Obsidian():
             self, 
             api_key: str,
             protocol: str = 'https',
-            host: str = "127.0.0.1",
+            host: str = str(os.getenv('OBSIDIAN_HOST', '127.0.0.1')),
             port: int = int(os.getenv('OBSIDIAN_PORT', '27124')),
             verify_ssl: bool = False,
         ):
